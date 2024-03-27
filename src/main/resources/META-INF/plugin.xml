@@ -1,18 +1,21 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.mohamead.allurereportplugin</id>
-    <name>allure-report-plugin</name>
-    <vendor>mohamead</vendor>
+    <id>com.github.mohamead.allure.report.plugin</id>
+    <name>Allure Report</name>
+    <vendor>Mohamed Adrik</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.all</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <actions>
+        <group id="AllureReport.All" text="Allure" popup="true"
+               class="com.github.mohamead.allure.report.plugin.action.MainActionGroup"
+               icon="com.github.mohamead.allure.report.plugin.icon.PluginIcons.allure">
+            <action id="AllureWrapper.Open" class="com.github.mohamead.allure.report.plugin.action.OpenAction"
+                    text="Open"/>
+            <action id="AllureWrapper.Serve" class="com.github.mohamead.allure.report.plugin.action.ServeAction"
+                    text="Serve"/>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.mohamead.allurereportplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.mohamead.allurereportplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </group>
+    </actions>
 </idea-plugin>
