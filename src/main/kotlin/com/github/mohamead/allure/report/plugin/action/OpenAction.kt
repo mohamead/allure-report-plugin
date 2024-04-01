@@ -7,20 +7,20 @@ import com.github.mohamead.allure.report.plugin.util.addCommandOption
 import com.github.mohamead.allure.report.plugin.util.addValue
 import com.github.mohamead.allure.report.plugin.util.showIfValidFolderName
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.CommonDataKeys
 
 internal class OpenAction : AllureAction() {
+
+    private val openCommand: MutableSet<String> = mutableSetOf()
 
     internal companion object {
         val openFolders: HashSet<String> = hashSetOf("allure-report")
     }
 
     override fun actionPerformed(e: AnActionEvent) {
-        val virtualFile = e.getData(CommonDataKeys.VIRTUAL_FILE)!!
-        val path = virtualFile.path
+        val path = getPath(e)
 
         runCommand(
-            allureCommand
+            openCommand
                 .addCommand(OPEN).addValue(path)
                 .addCommandOption(HOST).addValue(localHost)
         )

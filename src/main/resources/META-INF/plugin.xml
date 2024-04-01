@@ -10,6 +10,8 @@
         <group id="AllureReport.All" text="Allure" popup="true"
                class="com.github.mohamead.allure.report.plugin.action.MainActionGroup"
                icon="com.github.mohamead.allure.report.plugin.icon.PluginIcons.allure">
+            <action id="AllureWrapper.Generate" class="com.github.mohamead.allure.report.plugin.action.GenerateAction"
+                    text="Generate"/>
             <action id="AllureWrapper.Open" class="com.github.mohamead.allure.report.plugin.action.OpenAction"
                     text="Open"/>
             <action id="AllureWrapper.Serve" class="com.github.mohamead.allure.report.plugin.action.ServeAction"

@@ -4,6 +4,8 @@ import com.github.mohamead.allure.report.plugin.action.args.Command
 import com.github.mohamead.allure.report.plugin.action.args.CommandOption
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import io.qameta.allure.CommandLine
+import java.util.concurrent.CompletableFuture
 
 internal fun showIfValidFolderName(e: AnActionEvent, folderNames: HashSet<String>) {
     val virtualFile = e.getData(CommonDataKeys.VIRTUAL_FILE)
@@ -26,17 +28,8 @@ internal fun MutableSet<String>.addCommand(command: Command): MutableSet<String>
     return this
 }
 
-internal fun getAllureCommand(): MutableSet<String> {
-    val osName = System.getProperty("os.name").lowercase()
-    val allureCommand = mutableSetOf<String>()
-    if ("windows" in osName) {
-        allureCommand.add(Command.ALLURE_WINDOWS.value)
-    } else {
-        allureCommand.add(Command.ALLURE_OTHER.value)
+internal fun runProcess(command: MutableSet<String>) {
+    CompletableFuture.runAsync {
+        CommandLine.main(command.toTypedArray())
     }
-    return allureCommand
-}
-
-internal fun runProcess(command: Array<String>): Process {
-    return Runtime.getRuntime().exec(command, null)
 }

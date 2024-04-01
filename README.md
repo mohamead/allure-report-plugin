@@ -6,10 +6,9 @@
 
 <!-- Plugin description -->
 Unofficial plugin that wraps the following [allure](https://allurereport.org/docs/gettingstarted-view-report/) commands:
-- Serve any **allure-results**, **failsafe-reports** or **surefire-reports** folder(s)
-- Open any **allure-report** folder
-
-**NB! allure need's to be [installed](https://allurereport.org/docs/gettingstarted-installation/) to use this plugin.**
+- Generate any **allure-report** from **allure-results**
+- Open any **allure-report**
+- Serve any **allure-results**, **surefire-reports** or **failsafe-reports**
 <!-- Plugin description end -->
 
 ## Installation
