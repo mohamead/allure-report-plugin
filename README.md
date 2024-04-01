@@ -30,7 +30,7 @@ allure's **generate**, **open** and **serve** command on specific folders.
 
 **Generate**: A pre-request in order to use this command is that the folder must be named `allure-results`. 
 
-![Image Alt text](/images/Generate.png "Optional title")
+![Image Alt text](/images/Generate.PNG "Optional title")
 
 **Open**: A pre-request is that the folder-name is `allure-report`.
 
