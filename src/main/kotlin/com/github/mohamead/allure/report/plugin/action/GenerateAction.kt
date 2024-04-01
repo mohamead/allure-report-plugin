@@ -16,13 +16,12 @@ import com.intellij.openapi.vfs.VirtualFileManager
 
 internal class GenerateAction : AllureAction() {
 
-    private val generateCommand: MutableSet<String> = mutableSetOf()
-
     internal companion object {
         val generateFolder: HashSet<String> = hashSetOf(serveFolders.first())
     }
 
     override fun actionPerformed(e: AnActionEvent) {
+        val generateCommand: MutableSet<String> = mutableSetOf()
         val origin = getPath(e)
         val destination = origin.replace(generateFolder.first(), openFolders.first())
 

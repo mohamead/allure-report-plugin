@@ -10,13 +10,12 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 
 internal class OpenAction : AllureAction() {
 
-    private val openCommand: MutableSet<String> = mutableSetOf()
-
     internal companion object {
         val openFolders: HashSet<String> = hashSetOf("allure-report")
     }
 
     override fun actionPerformed(e: AnActionEvent) {
+        val openCommand: MutableSet<String> = mutableSetOf()
         val path = getPath(e)
 
         runCommand(

@@ -10,13 +10,12 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 
 internal class ServeAction : AllureAction() {
 
-    private val serveCommand: MutableSet<String> = mutableSetOf()
-
     internal companion object {
         val serveFolders: HashSet<String> = hashSetOf("allure-results", "failsafe-reports", "surefire-reports")
     }
 
     override fun actionPerformed(e: AnActionEvent) {
+        val serveCommand: MutableSet<String> = mutableSetOf()
         val path = getPath(e)
 
         runCommand(
