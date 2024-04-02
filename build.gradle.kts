@@ -26,7 +26,7 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
-    implementation(files("allure-commandline-2.28-SNAPSHOT.jar"))
+    implementation(files("libs/allure-commandline-2.28-SNAPSHOT.jar"))
 
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.2")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.2")
