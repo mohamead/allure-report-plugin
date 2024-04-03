@@ -1,8 +1,8 @@
 # ![allure-report-plugin](./src/main/resources/META-INF/pluginIcon.svg) Allure Report
 
 ![Build](https://github.com/mohamead/allure-report-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/24074)](https://plugins.jetbrains.com/plugin/24074-allure-report/versions)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/24074)](https://plugins.jetbrains.com/plugin/24074-allure-report)
 
 <!-- Plugin description -->
 Unofficial plugin that wraps the following [allure](https://github.com/allure-framework/allure2) commands:
