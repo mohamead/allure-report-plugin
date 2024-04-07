@@ -9,8 +9,12 @@ import java.util.concurrent.CompletableFuture
 
 internal fun showIfValidFolderName(e: AnActionEvent, folderNames: HashSet<String>) {
     val virtualFile = e.getData(CommonDataKeys.VIRTUAL_FILE)
-    val isValid = (virtualFile != null && virtualFile.isDirectory && folderNames.contains(virtualFile.name))
+    val isValid = (virtualFile != null && virtualFile.isDirectory && folderNames.matchAny(virtualFile.name))
     e.presentation.isEnabledAndVisible = isValid
+}
+
+internal fun MutableSet<String>.matchAny(value: String): Boolean {
+    return this.any { value.contains(it) }
 }
 
 internal fun MutableSet<String>.addCommandOption(option: CommandOption): MutableSet<String> {

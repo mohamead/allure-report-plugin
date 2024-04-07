@@ -5,10 +5,7 @@
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/24074)](https://plugins.jetbrains.com/plugin/24074-allure-report)
 
 <!-- Plugin description -->
-Unofficial plugin that wraps the following [allure](https://github.com/allure-framework/allure2) commands:
-- Generate any **allure-report** from **allure-results**
-- Open any **allure-report**
-- Serve any **allure-results**, **surefire-reports** or **failsafe-reports**
+Simple plugin that wraps the allure commands: **generate**, **open** and **serve**
 <!-- Plugin description end -->
 
 ## Installation
@@ -28,15 +25,15 @@ Unofficial plugin that wraps the following [allure](https://github.com/allure-fr
 The plugin is developed without the need of allure being installed. Once the plugin is installed it will allow us to perform 
 allure's **generate**, **open** and **serve** command on specific folders.
 
-**Generate**: A pre-request in order to use this command is that the folder must be named `allure-results`. 
+**Generate**: A pre-request in order to use this command is that the folder-name must contain the value `allure-results`. 
 
 ![Image Alt text](/images/Generate.png)
 
 ![Image Alt text](/images/Allure.png)
 
-**Open**: A pre-request is that the folder-name is named `allure-report`.
+**Open**: A pre-request is that the folder-name must contain the value `allure-report`.
 
-**Serve**: A pre-request is that the folder-name is named one of the following `allure-results`, `surefire-reports` or `failsafe-reports`
+**Serve**: A pre-request is that the folder-name must contain one of the following names `allure-results`, `surefire-reports` or `failsafe-reports`
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
