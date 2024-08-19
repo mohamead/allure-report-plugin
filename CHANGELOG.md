@@ -3,6 +3,10 @@
 # allure-report-plugin Changelog
 
 ## [Unreleased]
+## [0.0.3] - 2024-08-19
+### Changed
+- PluginUntilBuild to 242.*
+
 ## [0.0.2] - 2024-04-07
 ### Changed
 - README.md to include change done in code
