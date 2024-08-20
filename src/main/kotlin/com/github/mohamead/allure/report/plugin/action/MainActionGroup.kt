@@ -3,6 +3,7 @@ package com.github.mohamead.allure.report.plugin.action
 import com.github.mohamead.allure.report.plugin.action.OpenAction.Companion.openFolders
 import com.github.mohamead.allure.report.plugin.action.ServeAction.Companion.serveFolders
 import com.github.mohamead.allure.report.plugin.util.showIfValidFolderName
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.DefaultActionGroup
 
@@ -14,4 +15,7 @@ internal class MainActionGroup : DefaultActionGroup() {
         showIfValidFolderName(e, allFolders)
     }
 
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.BGT
+    }
 }

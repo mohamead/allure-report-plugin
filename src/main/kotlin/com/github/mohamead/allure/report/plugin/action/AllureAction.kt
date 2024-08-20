@@ -1,6 +1,7 @@
 package com.github.mohamead.allure.report.plugin.action
 
 import com.github.mohamead.allure.report.plugin.util.runProcess
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -22,4 +23,7 @@ internal abstract class AllureAction : AnAction(), DumbAware {
         return virtualFile.toNioPath().toAbsolutePath().toString()
     }
 
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.BGT
+    }
 }
