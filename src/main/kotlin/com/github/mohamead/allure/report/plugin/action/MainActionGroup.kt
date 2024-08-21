@@ -15,7 +15,6 @@ internal class MainActionGroup : DefaultActionGroup() {
         showIfValidFolderName(e, allFolders)
     }
 
-    override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.BGT
-    }
+    override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT
+    
 }

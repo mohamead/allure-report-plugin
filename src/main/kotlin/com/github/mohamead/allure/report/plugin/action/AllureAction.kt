@@ -23,7 +23,6 @@ internal abstract class AllureAction : AnAction(), DumbAware {
         return virtualFile.toNioPath().toAbsolutePath().toString()
     }
 
-    override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.BGT
-    }
+    override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT
+
 }
