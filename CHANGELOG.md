@@ -3,6 +3,10 @@
 # allure-report-plugin Changelog
 
 ## [Unreleased]
+## [0.0.5] - 2024-10-29
+### Changed
+- Clean misc
+
 ## [0.0.4] - 2024-08-21
 ### Fixed
 - PluginException: ActionUpdateThread.OLD_EDT is deprecated and going to be removed soon. 

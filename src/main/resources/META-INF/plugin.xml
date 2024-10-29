@@ -3,8 +3,7 @@
     <id>com.github.mohamead.allure.report.plugin</id>
     <name>Allure Report</name>
     <vendor>Mohamed Adrik</vendor>
-
-    <depends>com.intellij.modules.all</depends>
+    <depends>com.intellij.modules.platform</depends>
 
     <actions>
         <group id="AllureReport.All" text="Allure" popup="true"
