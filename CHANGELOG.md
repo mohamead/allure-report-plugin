@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [0.0.7] - 2024-12-02
+### Added
+- Behaviors and Packages tabs to allure-report result-view 
+
 ## [0.0.6] - 2024-11-22 
 ### Changed
 - Remove PluginUntilBuild
