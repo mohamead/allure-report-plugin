@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+## [0.0.8] - 2025-04-30
+### Updated
+- Different dependencies
+- Clean misc
+
 ## [0.0.7] - 2024-12-02
 ### Added
 - Behaviors and Packages tabs to allure-report result-view 
