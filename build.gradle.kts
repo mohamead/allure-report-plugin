@@ -28,7 +28,7 @@ repositories {
 dependencies {
     implementation(files("libs/allure-commandline-2.33-SNAPSHOT.jar"))
 
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.11.3")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.13.1")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.11.3")
 }
 
