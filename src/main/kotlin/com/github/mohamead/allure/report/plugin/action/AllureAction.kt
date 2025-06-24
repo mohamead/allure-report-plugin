@@ -10,11 +10,11 @@ import com.intellij.openapi.project.DumbAware
 
 internal abstract class AllureAction : AnAction(), DumbAware {
 
-    private val LOGGER: Logger = Logger.getInstance(AllureAction::class.java)
+    private val logger: Logger = Logger.getInstance(AllureAction::class.java)
     protected val localHost = "localhost"
 
     protected open fun runCommand(command: MutableSet<String>) {
-        LOGGER.info("Command : java -jar allure-commandline-2.33-SNAPSHOT.jar ${command.joinToString(separator = " ")}")
+        logger.info("Command : java -jar allure-commandline-2.33-SNAPSHOT.jar ${command.joinToString(separator = " ")}")
         runProcess(command)
     }
 
