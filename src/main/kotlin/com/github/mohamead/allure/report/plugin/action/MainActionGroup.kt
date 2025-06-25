@@ -9,12 +9,14 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup
 
 internal class MainActionGroup : DefaultActionGroup() {
 
-    private val allFolders = openFolders.union(serveFolders).toHashSet()
+    internal companion object {
+        val allFolders = openFolders.union(serveFolders).toHashSet()
+    }
 
     override fun update(e: AnActionEvent) {
         showIfValidFolderName(e, allFolders)
     }
 
     override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT
-    
+
 }
