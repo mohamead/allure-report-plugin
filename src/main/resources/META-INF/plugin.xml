@@ -5,6 +5,11 @@
     <vendor>Mohamed Adrik</vendor>
     <depends>com.intellij.modules.platform</depends>
 
+    <extensions defaultExtensionNs="com.intellij">
+        <iconProvider implementation="com.github.mohamead.allure.report.plugin.provider.AllureIconProvider"/>
+        <projectViewNodeDecorator implementation="com.github.mohamead.allure.report.plugin.decorator.AllureDecorator"/>
+    </extensions>
+
     <actions>
         <group id="AllureReport.All" text="Allure" popup="true"
                class="com.github.mohamead.allure.report.plugin.action.MainActionGroup"
@@ -15,7 +20,6 @@
                     text="Open"/>
             <action id="AllureWrapper.Serve" class="com.github.mohamead.allure.report.plugin.action.ServeAction"
                     text="Serve"/>
-
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </group>
     </actions>
