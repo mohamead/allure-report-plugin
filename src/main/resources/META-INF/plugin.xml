@@ -6,7 +6,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <iconProvider implementation="com.github.mohamead.allure.report.plugin.provider.AllureIconProvider"/>
+        <fileIconProvider implementation="com.github.mohamead.allure.report.plugin.provider.AllureIconProvider"/>
         <projectViewNodeDecorator implementation="com.github.mohamead.allure.report.plugin.decorator.AllureDecorator"/>
     </extensions>
 
