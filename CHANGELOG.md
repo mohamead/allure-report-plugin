@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [0.0.10] - 2025-06-26
+### What's Changed
+* Fix PluginException that is thrown by @mohamead in [#88](https://github.com/mohamead/allure-report-plugin/pull/88)
+
+**Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.0.9...v0.0.10
+
 ## [0.0.9] - 2025-06-26
 ### What's Changed
 * Bump org.gradle.toolchains.foojay-resolver-convention from 0.9.0 to 0.10.0 by @dependabot in [#69](https://github.com/mohamead/allure-report-plugin/pull/69)
