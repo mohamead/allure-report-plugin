@@ -31,7 +31,7 @@
 - Remove PluginUntilBuild
 
 ## [0.0.5] - 2024-10-29
-### Changed 
+### Changed
 - Clean misc
 
 ## [0.0.4] - 2024-08-21
