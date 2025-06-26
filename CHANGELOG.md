@@ -4,6 +4,19 @@
 
 ## [Unreleased]
 
+## [0.0.9] - 2025-06-26
+### What's Changed
+* Bump org.gradle.toolchains.foojay-resolver-convention from 0.9.0 to 0.10.0 by @dependabot in [#69](https://github.com/mohamead/allure-report-plugin/pull/69)
+* Bump JetBrains/qodana-action from 2024.3.4 to 2025.1.0 by @dependabot in [#73](https://github.com/mohamead/allure-report-plugin/pull/73)
+* Bump org.jetbrains.qodana from 2024.3.4 to 2025.1.0 by @dependabot in [#72](https://github.com/mohamead/allure-report-plugin/pull/72)
+* Bump org.jetbrains.qodana from 2025.1.0 to 2025.1.1 by @dependabot in [#75](https://github.com/mohamead/allure-report-plugin/pull/75)
+* Clean github workflow by @mohamead in [#83](https://github.com/mohamead/allure-report-plugin/pull/83)
+* Bump org.gradle.toolchains.foojay-resolver-convention from 0.10.0 to 1.0.0 by @dependabot in [#77](https://github.com/mohamead/allure-report-plugin/pull/77)
+* Bump JetBrains/qodana-action from 2025.1.0 to 2025.1.1 by @dependabot in [#74](https://github.com/mohamead/allure-report-plugin/pull/74)
+* Add allure icon to valid folder(s) by @mohamead in [#84](https://github.com/mohamead/allure-report-plugin/pull/84)
+
+**Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.0.8...v0.0.9
+
 ## [0.0.8] - 2025-04-30
 ### Updated
 - Different dependencies
@@ -18,7 +31,7 @@
 - Remove PluginUntilBuild
 
 ## [0.0.5] - 2024-10-29
-### Changed
+### Changed 
 - Clean misc
 
 ## [0.0.4] - 2024-08-21
