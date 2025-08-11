@@ -28,8 +28,10 @@ repositories {
 dependencies {
     implementation(files("libs/allure-commandline-2.33-SNAPSHOT.jar"))
 
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.13.4")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.13.4")
+    testImplementation(platform("org.junit:junit-bom:5.13.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.junit.jupiter:junit-jupiter-params")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 // Set the JVM language level used to build the project.
