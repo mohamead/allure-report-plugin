@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [0.0.11] - 2025-10-25
+### What's Changed
+* Update allure-commendline to v2.36-SNAPSHOT
+
 ## [0.0.10] - 2025-06-26
 ### What's Changed
 * Fix PluginException that is thrown by @mohamead in [#88](https://github.com/mohamead/allure-report-plugin/pull/88)
