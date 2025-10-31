@@ -14,13 +14,24 @@
         <group id="AllureReport.All" text="Allure" popup="true"
                class="com.github.mohamead.allure.report.plugin.action.MainActionGroup"
                icon="com.github.mohamead.allure.report.plugin.icon.PluginIcons.allure">
-            <action id="AllureWrapper.Generate" class="com.github.mohamead.allure.report.plugin.action.GenerateAction"
-                    text="Generate"/>
-            <action id="AllureWrapper.Open" class="com.github.mohamead.allure.report.plugin.action.OpenAction"
-                    text="Open"/>
-            <action id="AllureWrapper.Serve" class="com.github.mohamead.allure.report.plugin.action.ServeAction"
-                    text="Serve"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </group>
+
+        <action id="AllureWrapper.Generate" class="com.github.mohamead.allure.report.plugin.action.GenerateAction"
+                text="Generate">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt Q"/>
+            <add-to-group group-id="AllureReport.All" anchor="first"/>
+        </action>
+
+        <action id="AllureWrapper.Open" class="com.github.mohamead.allure.report.plugin.action.OpenAction"
+                text="Open">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt W"/>
+            <add-to-group group-id="AllureReport.All" anchor="first"/>
+        </action>
+        <action id="AllureWrapper.Serve" class="com.github.mohamead.allure.report.plugin.action.ServeAction"
+                text="Serve">
+            <keyboard-shortcut keymap="$default" first-keystroke="alt E"/>
+            <add-to-group group-id="AllureReport.All" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>

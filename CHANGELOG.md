@@ -6,7 +6,18 @@
 
 ## [0.0.11] - 2025-10-25
 ### What's Changed
-* Update allure-commendline to v2.36-SNAPSHOT
+* Bump org.jetbrains.changelog from 2.2.1 to 2.4.0 by @dependabot[bot] in [95](https://github.com/mohamead/allure-report-plugin/pull/95)
+* Bump org.junit.jupiter:junit-jupiter-engine from 5.11.3 to 5.13.4 by @dependabot[bot] in [92](https://github.com/mohamead/allure-report-plugin/pull/92)
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in [96](https://github.com/mohamead/allure-report-plugin/pull/96)
+* Bump JetBrains/qodana-action from 2025.1.1 to 2025.2.1 by @dependabot[bot] in [98](https://github.com/mohamead/allure-report-plugin/pull/98)
+* Bump org.jetbrains.qodana from 2025.1.1 to 2025.2.1 by @dependabot[bot] in [97](https://github.com/mohamead/allure-report-plugin/pull/97)
+* Bump gradle/actions from 4 to 5 by @dependabot[bot] in [105](https://github.com/mohamead/allure-report-plugin/pull/105)
+* Bump actions/upload-artifact from 4 to 5 by @dependabot[bot] in [109](https://github.com/mohamead/allure-report-plugin/pull/109)
+* Bump org.jetbrains:annotations from 26.0.2 to 26.0.2-1 by @dependabot[bot] in [101](https://github.com/mohamead/allure-report-plugin/pull/101)
+* Bump actions/setup-java from 4 to 5 by @dependabot[bot] in [100](https://github.com/mohamead/allure-report-plugin/pull/100)
+* Update allure-commandline to v2.36-SNAPSHOT by @mohamead in [110](https://github.com/mohamead/allure-report-plugin/pull/110)
+
+**Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.0.10...v0.0.11
 
 ## [0.0.10] - 2025-06-26
 ### What's Changed
