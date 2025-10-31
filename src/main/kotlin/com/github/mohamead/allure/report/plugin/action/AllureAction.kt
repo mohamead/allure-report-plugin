@@ -14,7 +14,7 @@ internal abstract class AllureAction : AnAction(), DumbAware {
     protected val localHost = "localhost"
 
     protected open fun runCommand(command: MutableSet<String>) {
-        logger.info("Command : java -jar allure-commandline-2.33-SNAPSHOT.jar ${command.joinToString(separator = " ")}")
+        logger.info("Command : java -jar allure-commandline-2.36-SNAPSHOT.jar ${command.joinToString(separator = " ")}")
         runProcess(command)
     }
 
