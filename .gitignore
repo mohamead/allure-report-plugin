@@ -2,5 +2,6 @@
 .idea
 .qodana
 .run
+.kotlin
 build
 allure-report/
