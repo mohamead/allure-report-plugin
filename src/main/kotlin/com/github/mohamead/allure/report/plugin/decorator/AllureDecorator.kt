@@ -7,19 +7,26 @@ import com.intellij.ide.projectView.PresentationData
 import com.intellij.ide.projectView.ProjectViewNode
 import com.intellij.ide.projectView.ProjectViewNodeDecorator
 import com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode
+import com.intellij.openapi.project.Project
+import com.intellij.psi.PsiDirectory
 
 internal class AllureDecorator : ProjectViewNodeDecorator {
 
-    override fun decorate(node: ProjectViewNode<*>?, data: PresentationData?) {
+    override fun decorate(node: ProjectViewNode<*>, data: PresentationData) {
         when (node) {
             is PsiDirectoryNode -> {
-                if (data != null && node.value != null) {
-                    if (allFolders.matchAny(node.value.name.lowercase().trim())) {
+                val directory = node.value
+                if (directory != null && !isProjectRoot(directory)) {
+                    if (allFolders.matchAny(directory.name.lowercase().trim())) {
                         data.setIcon(allure)
                     }
                 }
             }
         }
+    }
+
+    private fun isProjectRoot(directory: PsiDirectory): Boolean {
+        return directory.virtualFile.path == directory.project.basePath
     }
 
 }
