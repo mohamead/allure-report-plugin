@@ -4,10 +4,12 @@
     <name>Allure Report</name>
     <vendor>Mohamed Adrik</vendor>
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileIconProvider implementation="com.github.mohamead.allure.report.plugin.provider.AllureIconProvider"/>
+        <fileIconProvider implementation="com.github.mohamead.allure.report.plugin.provider.AllureFileIconProvider"/>
         <projectViewNodeDecorator implementation="com.github.mohamead.allure.report.plugin.decorator.AllureDecorator"/>
+        <iconProvider implementation="com.github.mohamead.allure.report.plugin.provider.AllureIconProvider"/>
     </extensions>
 
     <actions>

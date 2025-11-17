@@ -6,8 +6,8 @@ import com.github.mohamead.allure.report.plugin.util.addCommand
 import com.github.mohamead.allure.report.plugin.util.addCommandOption
 import com.github.mohamead.allure.report.plugin.util.addValue
 import io.qameta.allure.CommandLine
+import io.qameta.allure.Owner
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import java.nio.file.Paths
 
@@ -15,7 +15,7 @@ internal class AllureCommandTest {
 
     private val allureCommand = mutableSetOf<String>()
 
-    @Disabled
+    @Owner("Mohamed Adrik")
     @Test
     fun helpCommandTest() {
         val helpCommand = allureCommand.addValue("--help")
@@ -23,7 +23,7 @@ internal class AllureCommandTest {
         assertEquals(0, result)
     }
 
-    @Disabled
+    @Owner("Mohamed Adrik")
     @Test
     fun versionCommandTest() {
         val versionCommand = allureCommand.addValue("--version")
@@ -31,7 +31,7 @@ internal class AllureCommandTest {
         assertEquals(0, result)
     }
 
-    @Disabled
+    @Owner("Mohamed Adrik")
     @Test
     fun generateCommandTest() {
         val resultPath = Paths.get("src", "test", "testData", "allure-results").toAbsolutePath().toString()
