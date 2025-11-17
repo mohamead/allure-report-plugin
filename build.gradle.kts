@@ -28,7 +28,9 @@ repositories {
 dependencies {
     implementation(files("libs/allure-commandline-2.36-SNAPSHOT.jar"))
 
+    testImplementation(platform("io.qameta.allure:allure-bom:2.31.0"))
     testImplementation(platform("org.junit:junit-bom:6.0.1"))
+    testImplementation("io.qameta.allure:allure-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
@@ -83,7 +85,7 @@ tasks {
             val start = "<!-- Plugin description -->"
             val end = "<!-- Plugin description end -->"
 
-            with (it.lines()) {
+            with(it.lines()) {
                 if (!containsAll(listOf(start, end))) {
                     throw GradleException("Plugin description section not found in README.md:\n$start ... $end")
                 }
