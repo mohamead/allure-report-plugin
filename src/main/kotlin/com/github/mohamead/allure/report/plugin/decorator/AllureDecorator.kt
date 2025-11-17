@@ -7,7 +7,6 @@ import com.intellij.ide.projectView.PresentationData
 import com.intellij.ide.projectView.ProjectViewNode
 import com.intellij.ide.projectView.ProjectViewNodeDecorator
 import com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode
-import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiDirectory
 
 internal class AllureDecorator : ProjectViewNodeDecorator {
