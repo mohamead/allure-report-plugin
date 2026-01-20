@@ -29,7 +29,7 @@ dependencies {
     implementation(files("libs/allure-commandline-2.36-SNAPSHOT.jar"))
 
     testImplementation(platform("io.qameta.allure:allure-bom:2.32.0"))
-    testImplementation(platform("org.junit:junit-bom:6.0.1"))
+    testImplementation(platform("org.junit:junit-bom:6.0.2"))
     testImplementation("io.qameta.allure:allure-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
