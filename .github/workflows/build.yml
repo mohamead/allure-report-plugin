@@ -23,7 +23,7 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
-  
+
 jobs:
 
   # Prepare environment and build the plugin
@@ -36,26 +36,24 @@ jobs:
       pluginVerifierHomeDir: ${{ steps.properties.outputs.pluginVerifierHomeDir }}
     steps:
 
-      # Check out current repository
+      # Check out the current repository
       - name: Fetch Sources
-        uses: actions/checkout@v6
-
-      # Validate wrapper
-      - name: Gradle Wrapper Validation
-        uses: gradle/wrapper-validation-action@v3
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       # Set up Java environment for the next steps
       - name: Setup Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
         with:
           distribution: zulu
           java-version: 17
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v5
-        with:
-          gradle-home-cache-cleanup: true
+        uses: gradle/actions/setup-gradle@39e147cb9de83bb9910b8ef8bd7fff0ee20fcd6f
+
+      # Change Wrapper Permissions
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
 
       # Set environment variables
       - name: Export Properties
@@ -72,8 +70,6 @@ jobs:
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-          ./gradlew listProductsReleases # prepare list of IDEs for Plugin Verifier
 
       # Build plugin
       - name: Build plugin
@@ -92,7 +88,7 @@ jobs:
 
       # Store already-built plugin as an artifact for downloading
       - name: Upload artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: ${{ steps.artifact.outputs.filename }}
           path: ./build/distributions/content/*/*
@@ -104,22 +100,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # Check out current repository
+      # Check out the current repository
       - name: Fetch Sources
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       # Set up Java environment for the next steps
       - name: Setup Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
         with:
           distribution: zulu
           java-version: 17
 
       # Setup Gradle
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v5
-        with:
-          gradle-home-cache-cleanup: true
+        uses: gradle/actions/setup-gradle@39e147cb9de83bb9910b8ef8bd7fff0ee20fcd6f
+
+      # Change Wrapper Permissions
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
 
       # Run tests
       - name: Run Tests
@@ -128,14 +126,14 @@ jobs:
       # Collect Tests Result of failed tests
       - name: Collect Tests Result
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: tests-result
           path: ${{ github.workspace }}/build/reports/tests
 
       # Upload the Kover report to CodeCov
       - name: Upload Code Coverage Report
-        uses: codecov/codecov-action@v6
+        uses: codecov/codecov-action@57e3a136b779b570ffcdbf80b3bdc90e7fab3de2
         with:
           files: ${{ github.workspace }}/build/reports/kover/report.xml
 
@@ -154,16 +152,20 @@ jobs:
       - name: Maximize Build Space
         uses: jlumbroso/free-disk-space@main
         with:
-          tool-cache: false
-          large-packages: false
+          tool-cache: true
+          large-packages: true
+          android: true
+          dotnet: true
+          swap-storage: true
+          docker-images: true
 
       # Check out current repository
       - name: Fetch Sources
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       # Set up Java environment for the next steps
       - name: Setup Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
         with:
           distribution: zulu
           java-version: 17
@@ -185,25 +187,27 @@ jobs:
   #    - name: Maximize Build Space
   #      uses: jlumbroso/free-disk-space@main
   #      with:
-  #        tool-cache: false
-  #        large-packages: false
+  #        tool-cache: true
+  #        large-packages: true
   #
-  #    # Check out current repository
+  #    # Check out the current repository
   #    - name: Fetch Sources
-  #      uses: actions/checkout@v6
+  #      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
   #
   #    # Set up Java environment for the next steps
   #    - name: Setup Java
-  #      uses: actions/setup-java@v5
+  #      uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
   #      with:
   #        distribution: zulu
   #        java-version: 17
   #
   #    # Setup Gradle
   #    - name: Setup Gradle
-  #      uses: gradle/actions/setup-gradle@v5
-  #      with:
-  #        gradle-home-cache-cleanup: true
+  #      uses: gradle/actions/setup-gradle@39e147cb9de83bb9910b8ef8bd7fff0ee20fcd6f
+  #
+  #    # Change Wrapper Permissions
+  #    - name: Change wrapper permissions
+  #      run: chmod +x ./gradlew
   #
   #    # Cache Plugin Verifier IDEs
   #    - name: Setup Plugin Verifier IDEs Cache
@@ -214,12 +218,12 @@ jobs:
   #
   #    # Run Verify Plugin task and IntelliJ Plugin Verifier tool
   #    - name: Run Plugin Verification tasks
-  #      run: ./gradlew runPluginVerifier -Dplugin.verifier.home.dir=${{ needs.build.outputs.pluginVerifierHomeDir }}
+  #      run: ./gradlew verifyPlugin -Dplugin.verifier.home.dir=${{ needs.build.outputs.pluginVerifierHomeDir }}
   #
   #    # Collect Plugin Verifier Result
   #    - name: Collect Plugin Verifier Result
   #      if: ${{ always() }}
-  #      uses: actions/upload-artifact@v7
+  #      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
   #      with:
   #        name: pluginVerifier-result
   #        path: ${{ github.workspace }}/build/reports/pluginVerifier
@@ -232,7 +236,7 @@ jobs:
     needs: [
       build,
       test,
-      inspectCode
+      inspectCode,
       #verify
     ]
     runs-on: ubuntu-latest
@@ -240,9 +244,9 @@ jobs:
       contents: write
     steps:
 
-      # Check out current repository
+      # Check out the current repository
       - name: Fetch Sources
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       # Remove old release drafts by using the curl request for the available releases with a draft flag
       - name: Remove Old Release Drafts
