@@ -4,6 +4,38 @@
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-03-31
+### What's Changed
+* Bump actions/checkout from 5 to 6 by @dependabot[bot] in [#118](https://github.com/mohamead/allure-report-plugin/pull/118)
+* Bump org.jetbrains.qodana from 2025.2.1 to 2025.2.2 by @dependabot[bot] in [#117](https://github.com/mohamead/allure-report-plugin/pull/117)
+* Bump org.jetbrains.changelog from 2.4.0 to 2.5.0 by @dependabot[bot] in [#119](https://github.com/mohamead/allure-report-plugin/pull/119)
+* Bump JetBrains/qodana-action from 2025.2.1 to 2025.2.2 by @dependabot[bot] in [#116](https://github.com/mohamead/allure-report-plugin/pull/116)
+* Bump org.jetbrains.qodana from 2025.2.2 to 2025.2.3 by @dependabot[bot] in [#120](https://github.com/mohamead/allure-report-plugin/pull/120)
+* Bump org.jetbrains.qodana from 2025.2.3 to 2025.3.1 by @dependabot[bot] in [#129](https://github.com/mohamead/allure-report-plugin/pull/129)
+* Bump JetBrains/qodana-action from 2025.2.2 to 2025.3.1 by @dependabot[bot] in [#128](https://github.com/mohamead/allure-report-plugin/pull/128)
+* Bump org.jetbrains.kotlin.jvm from 2.2.21 to 2.3.0 by @dependabot[bot] in [#127](https://github.com/mohamead/allure-report-plugin/pull/127)
+* Bump io.qameta.allure:allure-bom from 2.31.0 to 2.32.0 by @dependabot[bot] in [#126](https://github.com/mohamead/allure-report-plugin/pull/126)
+* Bump actions/upload-artifact from 5 to 6 by @dependabot[bot] in [#125](https://github.com/mohamead/allure-report-plugin/pull/125)
+* Bump org.junit:junit-bom from 6.0.1 to 6.0.2 by @dependabot[bot] in [#130](https://github.com/mohamead/allure-report-plugin/pull/130)
+* Bump org.jetbrains:annotations from 26.0.2-1 to 26.1.0 by @dependabot[bot] in [#138](https://github.com/mohamead/allure-report-plugin/pull/138)
+* Bump org.junit:junit-bom from 6.0.2 to 6.0.3 by @dependabot[bot] in [#137](https://github.com/mohamead/allure-report-plugin/pull/137)
+* Bump org.jetbrains.kotlin.jvm from 2.3.0 to 2.3.10 by @dependabot[bot] in [#135](https://github.com/mohamead/allure-report-plugin/pull/135)
+* Bump actions/upload-artifact from 6 to 7 by @dependabot[bot] in [#140](https://github.com/mohamead/allure-report-plugin/pull/140)
+* Bump io.qameta.allure:allure-bom from 2.32.0 to 2.33.0 by @dependabot[bot] in [#139](https://github.com/mohamead/allure-report-plugin/pull/139)
+* Bump codecov/codecov-action from 5 to 6 by @dependabot[bot] in [#148](https://github.com/mohamead/allure-report-plugin/pull/148)
+* Bump org.jetbrains.qodana from 2025.3.1 to 2025.3.2 by @dependabot[bot] in [#144](https://github.com/mohamead/allure-report-plugin/pull/144)
+* Bump org.jetbrains.kotlin.jvm from 2.3.10 to 2.3.20 by @dependabot[bot] in [#143](https://github.com/mohamead/allure-report-plugin/pull/143)
+* Bump JetBrains/qodana-action from 2025.3.1 to 2025.3.2 by @dependabot[bot] in [#142](https://github.com/mohamead/allure-report-plugin/pull/142)
+
+**Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.0.13...0.1.0
+
+## [0.0.13] - 2025-11-18
+### What's Changed
+* Bump org.junit:junit-bom from 6.0.0 to 6.0.1 by @dependabot[bot] in [#114](https://github.com/mohamead/allure-report-plugin/pull/114)
+* Add IconProvider for io.qameta.allure by @mohamead in [#115](https://github.com/mohamead/allure-report-plugin/pull/115)
+
+**Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.0.12...v0.0.13
+
 ## [0.0.12] - 2025-10-31
 ### What's Changed
 * Bump org.jetbrains.kotlin.jvm from 1.9.23 to 2.2.21 by @dependabot[bot] in [#108](https://github.com/mohamead/allure-report-plugin/pull/108)

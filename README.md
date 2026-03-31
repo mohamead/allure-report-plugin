@@ -3,6 +3,7 @@
 ![Build](https://github.com/mohamead/allure-report-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/24074)](https://plugins.jetbrains.com/plugin/24074-allure-report/versions)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/24074)](https://plugins.jetbrains.com/plugin/24074-allure-report)
+[![BuyMeACoffee](https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-donate-yellow.svg)](https://buymeacoffee.com/allurereportplugin)
 
 <!-- Plugin description -->
 Simple plugin that wraps the allure commands: **generate**, **open** and **serve**
