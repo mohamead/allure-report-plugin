@@ -4,6 +4,23 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-06-22
+### What's Changed
+* Bump gradle/actions from 6.0.1 to 6.1.0 by @dependabot[bot] in [#150](https://github.com/mohamead/allure-report-plugin/pull/150)
+* Bump actions/upload-artifact from 7.0.0 to 7.0.1 by @dependabot[bot] in [#153](https://github.com/mohamead/allure-report-plugin/pull/153)
+* Bump io.qameta.allure:allure-bom from 2.33.0 to 2.34.0 by @dependabot[bot] in [#151](https://github.com/mohamead/allure-report-plugin/pull/151)
+* Bump actions/setup-java from 5.2.0 to 5.3.0 by @dependabot[bot] in [#169](https://github.com/mohamead/allure-report-plugin/pull/169)
+* Bump JetBrains/qodana-action from 2025.3.2 to 2026.1.3 by @dependabot[bot] in [#168](https://github.com/mohamead/allure-report-plugin/pull/168)
+* Bump gradle/actions from 6.1.0 to 6.2.0 by @dependabot[bot] in [#167](https://github.com/mohamead/allure-report-plugin/pull/167)
+* Bump codecov/codecov-action from 6.0.0 to 7.0.0 by @dependabot[bot] in [#165](https://github.com/mohamead/allure-report-plugin/pull/165)
+* Bump actions/checkout from 6.0.2 to 6.0.3 by @dependabot[bot] in [#164](https://github.com/mohamead/allure-report-plugin/pull/164)
+* Bump org.junit:junit-bom from 6.0.3 to 6.1.0 by @dependabot[bot] in [#162](https://github.com/mohamead/allure-report-plugin/pull/162)
+* Bump gradle-wrapper from 9.4.1 to 9.5.1 by @dependabot[bot] in [#160](https://github.com/mohamead/allure-report-plugin/pull/160)
+* Bump org.jetbrains.qodana from 2025.3.2 to 2026.1.0 by @dependabot[bot] in [#157](https://github.com/mohamead/allure-report-plugin/pull/157)
+* Bump org.jetbrains.kotlin.jvm from 2.3.20 to 2.3.21 by @dependabot[bot] in [#154](https://github.com/mohamead/allure-report-plugin/pull/154)
+
+**Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.1.0...v0.1.1
+
 ## [0.1.0] - 2026-03-31
 ### What's Changed
 * Bump actions/checkout from 5 to 6 by @dependabot[bot] in [#118](https://github.com/mohamead/allure-report-plugin/pull/118)
