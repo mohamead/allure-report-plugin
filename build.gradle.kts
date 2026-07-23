@@ -31,7 +31,7 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
-    implementation(files("libs/allure-commandline-2.36-SNAPSHOT.jar"))
+    implementation(files("libs/allure-commandline-2.45-SNAPSHOT.jar"))
 
     testImplementation(platform("io.qameta.allure:allure-bom:2.35.3"))
     testImplementation(platform("org.junit:junit-bom:6.1.0"))
