@@ -33,7 +33,7 @@ repositories {
 dependencies {
     implementation(files("libs/allure-commandline-2.45-SNAPSHOT.jar"))
 
-    testImplementation(platform("io.qameta.allure:allure-bom:2.35.3"))
+    testImplementation(platform("io.qameta.allure:allure-bom:2.35.4"))
     testImplementation(platform("org.junit:junit-bom:6.1.0"))
     testImplementation("io.qameta.allure:allure-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter")
