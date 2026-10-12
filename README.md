@@ -47,8 +47,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-The plugin depends on [allure-report-api][wrapper]. Until that is published to a repository, install it locally first
-(`./gradlew publishToMavenLocal` in `allure-report-api`), then build the plugin with `./gradlew buildPlugin`.
+The plugin depends on [allure-report-api][wrapper], which is resolved from [JitPack](https://jitpack.io/#mohamead/allure-report-api)
+(`allureReportApiVersion` in `gradle.properties`, a release tag such as `v1.0.0-SNAPSHOT` by default).
+To build against local changes of the API, run `./gradlew publishToMavenLocal` in `allure-report-api` and build the plugin with
+`./gradlew buildPlugin -PallureReportApiVersion=1.0.0-SNAPSHOT`.
 
 ## License
 [apache-2.0](https://choosealicense.com/licenses/apache-2.0/)
