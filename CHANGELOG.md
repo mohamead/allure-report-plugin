@@ -4,7 +4,7 @@
 
 ## [Unreleased]
 
-## [0.2.0] - 2026-07-23
+## [0.2.0] - 2026-10-12
 ### What's Changed
 * Bump gradle/actions from 6.0.1 to 6.1.0 by @dependabot[bot] in [#150](https://github.com/mohamead/allure-report-plugin/pull/150)
 * Bump actions/upload-artifact from 7.0.0 to 7.0.1 by @dependabot[bot] in [#153](https://github.com/mohamead/allure-report-plugin/pull/153)
@@ -24,7 +24,13 @@
 * Bump io.qameta.allure:allure-bom from 2.34.0 to 2.35.3 by @dependabot[bot] in [#177](https://github.com/mohamead/allure-report-plugin/pull/177)
 * Bump org.jetbrains.kotlin.jvm from 2.3.21 to 2.4.0 by @dependabot[bot] in [#175](https://github.com/mohamead/allure-report-plugin/pull/175)
 * Bump org.jetbrains.qodana from 2026.1.0 to 2026.1.3 by @dependabot[bot] in [#173](https://github.com/mohamead/allure-report-plugin/pull/173)
-* Update allure-commandline to latest version by @mohamead in [#184](https://github.com/mohamead/allure-report-plugin/pull/184)
+* Bump JetBrains/qodana-action from 2026.1.3 to 2026.2.2 by @dependabot[bot] in [#200](https://github.com/mohamead/allure-report-plugin/pull/200)
+* Bump gradle/actions/setup-gradle from 6.2.0 to 6.4.0 by @dependabot[bot] in [#199](https://github.com/mohamead/allure-report-plugin/pull/199)
+* Bump codecov/codecov-action from 7.0.0 to 7.1.1 by @dependabot[bot] in [#198](https://github.com/mohamead/allure-report-plugin/pull/198)
+* Bump actions/setup-java from 5.6.0 to 6.0.1 by @dependabot[bot] in [#196](https://github.com/mohamead/allure-report-plugin/pull/196)
+* Bump org.jetbrains.kotlin.jvm from 2.4.0 to 2.4.10 by @dependabot[bot] in [#189](https://github.com/mohamead/allure-report-plugin/pull/189)
+* Bump org.junit:junit-bom from 6.1.0 to 6.1.2 by @dependabot[bot] in [#188](https://github.com/mohamead/allure-report-plugin/pull/188)
+* Add support for allure2 version 2.46.1 by @mohamead in [#201](https://github.com/mohamead/allure-report-plugin/pull/201)
 
 **Full Changelog**: https://github.com/mohamead/allure-report-plugin/compare/v0.1.0...v0.2.0
 

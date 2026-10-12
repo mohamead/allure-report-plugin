@@ -21,6 +21,8 @@ kotlin {
 
 // Configure project's dependencies
 repositories {
+    // allure-report-api is installed with `./gradlew publishToMavenLocal` in ../allure-report-api
+    mavenLocal()
     mavenCentral()
 
     // IntelliJ Platform Gradle Plugin Repositories Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-repositories-extension.html
@@ -31,7 +33,10 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
-    implementation(files("libs/allure-commandline-2.45-SNAPSHOT.jar"))
+    // Provided by the IDE at runtime (kotlin.stdlib.default.dependency=false), so don't bundle it.
+    implementation("com.github.mohamead.allure:allure-report-api:1.0.0-SNAPSHOT") {
+        exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib")
+    }
 
     testImplementation(platform("io.qameta.allure:allure-bom:2.35.3"))
     testImplementation(platform("org.junit:junit-bom:6.1.2"))
