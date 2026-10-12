@@ -1,12 +1,10 @@
 package com.github.mohamead.allure.report.plugin.action
 
-import com.github.mohamead.allure.report.plugin.action.args.Command.SERVE
-import com.github.mohamead.allure.report.plugin.action.args.CommandOption.HOST
-import com.github.mohamead.allure.report.plugin.util.addCommand
-import com.github.mohamead.allure.report.plugin.util.addCommandOption
-import com.github.mohamead.allure.report.plugin.util.addValue
+import com.github.mohamead.allure.report.plugin.service.ReportServers
 import com.github.mohamead.allure.report.plugin.util.showIfValidFolderName
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.components.service
+import com.github.mohamead.allure.report.AllureReport
 
 internal class ServeAction : AllureAction() {
 
@@ -15,14 +13,11 @@ internal class ServeAction : AllureAction() {
     }
 
     override fun actionPerformed(e: AnActionEvent) {
-        val serveCommand: MutableSet<String> = mutableSetOf()
         val path = getPath(e)
 
-        runCommand(
-            serveCommand
-                .addCommand(SERVE).addValue(path)
-                .addCommandOption(HOST).addValue(localHost)
-        )
+        runInBackground("serve $path") {
+            service<ReportServers>().start { AllureReport().serve(listOf(path), host = localHost) }
+        }
     }
 
     override fun update(e: AnActionEvent) {

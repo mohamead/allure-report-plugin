@@ -23,8 +23,9 @@ Simple plugin that wraps the allure commands: **generate**, **open** and **serve
 
 ## Usage
 
-The plugin is developed without the need of allure being installed. Once the plugin is installed it will allow us to perform 
-allure's **generate**, **open** and **serve** command on specific folders.
+The plugin is developed without the need of allure being installed. It uses the [allure-report-api][wrapper] library
+(a Kotlin wrapper of Allure 2), so reports are generated and served inside the IDE. Once the plugin is installed it will
+allow us to perform allure's **generate**, **open** and **serve** command on specific folders.
 
 **Generate**: A pre-request in order to use this command is that the folder-name must contain the value `allure-results`. 
 
@@ -36,17 +37,27 @@ allure's **generate**, **open** and **serve** command on specific folders.
 
 **Serve**: A pre-request is that the folder-name must contain one of the following names `allure-results`, `surefire-reports` or `failsafe-reports`
 
+Serve and Open start a local web server and open the report in your browser. You can have several reports open at the
+same time; they are all stopped (and the temporary reports of Serve deleted) when the IDE is closed.
+
+Reports are generated without analytics: nothing is sent to Google Analytics, and the report does not load Google Tag Manager.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+The plugin depends on [allure-report-api][wrapper], which is resolved from [JitPack](https://jitpack.io/#mohamead/allure-report-api)
+(`allureReportApiVersion` in `gradle.properties`, a release tag such as `v1.0.0-SNAPSHOT` by default).
+To build against local changes of the API, run `./gradlew publishToMavenLocal` in `allure-report-api` and build the plugin with
+`./gradlew buildPlugin -PallureReportApiVersion=1.0.0-SNAPSHOT`.
+
 ## License
 [apache-2.0](https://choosealicense.com/licenses/apache-2.0/)
 
 ---
-Plugin built using [IntelliJ Platform Plugin Template][template] and [forked version][fork] of [allure][allure2].
+Plugin built using [IntelliJ Platform Plugin Template][template] and [wrapper][wrapper] of [allure][allure2].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[fork]: https://github.com/mohamead/allure2
+[wrapper]: https://github.com/mohamead/allure-report-api
 [allure2]: https://github.com/allure-framework/allure2
