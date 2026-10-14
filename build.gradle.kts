@@ -45,7 +45,7 @@ dependencies {
     }
 
     testImplementation(platform("io.qameta.allure:allure-bom:2.35.3"))
-    testImplementation(platform("org.junit:junit-bom:6.1.2"))
+    testImplementation(platform("org.junit:junit-bom:6.1.3"))
     testImplementation("io.qameta.allure:allure-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
