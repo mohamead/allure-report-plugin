@@ -46,7 +46,7 @@ dependencies {
 
     testImplementation(platform("io.qameta.allure:allure-bom:3.0.0"))
     testImplementation(platform("org.junit:junit-bom:6.1.3"))
-    testImplementation("io.qameta.allure:allure-junit5")
+    testImplementation("io.qameta.allure:allure-jupiter")
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
