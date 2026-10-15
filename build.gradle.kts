@@ -44,7 +44,7 @@ dependencies {
         exclude(group = "org.jetbrains.kotlin", module = "kotlin-stdlib")
     }
 
-    testImplementation(platform("io.qameta.allure:allure-bom:2.35.3"))
+    testImplementation(platform("io.qameta.allure:allure-bom:3.0.0"))
     testImplementation(platform("org.junit:junit-bom:6.1.3"))
     testImplementation("io.qameta.allure:allure-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter")
